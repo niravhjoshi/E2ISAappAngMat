@@ -1,0 +1,27 @@
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+  <div fxFlex>
+    <div>
+      <h3>Person</h3>
+      <hr>
+    </div>
+
+  </div>
+  <div fxFlex>
+    <mat-grid-list cols="2" rowHeight="200px" >
+      <mat-grid-tile *ngFor="let person of persons" (click) = "onSelect(person)">
+        <img height="100px"  src = {{person.ImageURL}} alt={{person.FullName}}>
+        <mat-grid-tile-header>
+          <h1>{{person.FullName | uppercase}}</h1>
+        </mat-grid-tile-header>
+<!--        <p><span>{{person.Email}}</span></p>-->
+        <mat-grid-tile-footer>
+        <h2 >{{person.BirthDate}}</h2>
+          </mat-grid-tile-footer>
+
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+
+<app-persondetail [person] = "selectedPerson"></app-persondetail>
+</div>
