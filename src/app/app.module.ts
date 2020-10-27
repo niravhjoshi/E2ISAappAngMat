@@ -13,6 +13,10 @@ import 'hammerjs';
 import { PersonComponent } from './person/person.component';
 import { PersondetailComponent } from './persondetail/persondetail.component';
 
+// Services Component
+import {PersonService} from './services/person.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,7 @@ import { PersondetailComponent } from './persondetail/persondetail.component';
     MatGridListModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [PersonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

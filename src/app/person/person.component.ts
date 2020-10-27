@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Person} from '../../shared/person.model';
-import {PERSONS} from '../../shared/person.data';
+
+import {PersonService} from '../services/person.service';
 
 @Component({
   selector: 'app-person',
@@ -9,12 +10,13 @@ import {PERSONS} from '../../shared/person.data';
 })
 export class PersonComponent implements OnInit {
 
-  persons: Person[] = PERSONS;
+  persons: Person[];
   selectedPerson: Person;
 
-  constructor() { }
+  constructor(private personService: PersonService) { }
 
   ngOnInit() {
+    this.persons = this.personService.getPersons();
   }
   onSelect(person: Person) {
   this.selectedPerson = person;
