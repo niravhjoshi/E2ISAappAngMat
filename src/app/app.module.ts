@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatCardModule, MatGridListModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatGridListModule} from '@angular/material';
 import {MatListModule} from '@angular/material/list';
+
 
 import 'hammerjs';
 import { PersonComponent } from './person/person.component';
 import { PersondetailComponent } from './persondetail/persondetail.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 // Services Component
 import {PersonService} from './services/person.service';
@@ -21,7 +25,9 @@ import {PersonService} from './services/person.service';
   declarations: [
     AppComponent,
     PersonComponent,
-    PersondetailComponent
+    PersondetailComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,8 @@ import {PersonService} from './services/person.service';
     MatToolbarModule,
     MatListModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [PersonService],
   bootstrap: [AppComponent]
