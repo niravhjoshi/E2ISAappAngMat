@@ -15,10 +15,16 @@ import { PersonComponent } from './person/person.component';
 import { PersondetailComponent } from './persondetail/persondetail.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 // Services Component
 import {PersonService} from './services/person.service';
+
+// Module Reference
+import {AppRoutingModule} from './app-routing/app-routing.module';
 
 
 @NgModule({
@@ -27,11 +33,15 @@ import {PersonService} from './services/person.service';
     PersonComponent,
     PersondetailComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatListModule,
